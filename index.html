@@ -3,125 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thế Giới Trò Chơi Giải Trí</title>
+    <title>Khám Phá Trải Nghiệm Mới!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a1a;
+            color: #f0f0f0;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
             text-align: center;
         }
-        .hero {
-            position: relative;
-            background: url(your-hero-background.jpg) no-repeat center center/cover;
-            color: white;
-            padding: 60px 20px;
-            margin-top: 50px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
         }
-        .hero h1 {
+
+        h1 {
             font-size: 48px;
-            margin: 0;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            color: #ffcc00;
+            margin-top: 50px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
         }
-        .hero p {
-            font-size: 24px;
-            margin-top: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #ff5722;
-            color: white;
-            text-decoration: none;
+
+        p {
             font-size: 20px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 15px 30px;
+            font-size: 22px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            cursor: pointer;
             border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin: 20px 0;
         }
+
         .cta-button:hover {
-            background-color: #e64a19;
-            transform: scale(1.05);
+            background-color: #e5b300;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
+
         .features {
-            margin-top: 40px;
             display: flex;
             justify-content: space-around;
+            margin-top: 30px;
             flex-wrap: wrap;
-            gap: 20px;
         }
+
         .feature {
-            max-width: 300px;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            background-color: white;
             border-radius: 10px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1;
+            margin: 10px;
+            backdrop-filter: blur(5px);
+            border: 1px solid #ffcc00;
         }
-        .feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
-        }
-        .feature img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 15px;
-        }
+
         .feature h3 {
-            font-size: 24px;
-            color: #4CAF50;
+            font-size: 28px;
+            color: #ffcc00;
             margin-bottom: 10px;
         }
+
+        .feature p {
+            font-size: 18px;
+        }
+
+        .highlight {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
         footer {
             margin-top: 40px;
+            font-size: 16px;
+            color: #ccc;
             padding: 20px;
-            background-color: #333;
-            color: white;
-            text-align: center;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="hero">
-        <h1>Thế Giới Trò Chơi Giải Trí</h1>
-        <p>Tham gia vào các trò chơi giải trí nhẹ nhàng và thú vị dành cho mọi lứa tuổi.</p>
-        <a href="loading.html" class="cta-button"> Nhận 888k</a>
+    <div class="container">
+        <h1>Khám Phá Trải Nghiệm Mới!</h1>
+        <p>Khám phá cơ hội giải trí thú vị và những ưu đãi hấp dẫn đang chờ đón bạn. Tìm hiểu thêm về các hoạt động giải trí và phần thưởng độc quyền mà chúng tôi cung cấp!</p>
+        <button class="cta-button" onclick="redirectToLoading()">Khám Phá Ngay</button>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>Ưu Đãi Đặc Biệt</h3>
+                <p>Nhận ngay các ưu đãi đặc biệt và phần thưởng độc quyền cho người dùng mới.</p>
+            </div>
+            <div class="feature">
+                <h3>An Toàn và Bảo Mật</h3>
+                <p>Chúng tôi cam kết bảo vệ thông tin và dữ liệu của bạn với hệ thống bảo mật tiên tiến.</p>
+            </div>
+            <div class="feature">
+                <h3>Trải Nghiệm Đa Dạng</h3>
+                <p>Khám phá nhiều hoạt động giải trí thú vị và các sự kiện hấp dẫn hàng tháng.</p>
+            </div>
+        </div>
+        
+        <div class="highlight">
+            <p>Tham gia ngay để không bỏ lỡ cơ hội trải nghiệm độc đáo và các ưu đãi hấp dẫn!</p>
+        </div>
     </div>
 
-    <div class="features">
-        <div class="feature">
-            <img src="icon1.png" alt="Icon 1">
-            <h3>Giải Trí Mọi Lúc</h3>
-            <p>Thư giãn và tận hưởng những trò chơi thú vị giúp bạn xua tan mệt mỏi.</p>
-        </div>
-        <div class="feature">
-            <img src="icon2.png" alt="Icon 2">
-            <h3>Thách Thức Bản Thân</h3>
-            <p>Khám phá các trò chơi thử thách trí tuệ và kỹ năng.</p>
-        </div>
-        <div class="feature">
-            <img src="icon3.png" alt="Icon 3">
-            <h3>Cộng Đồng Vui Vẻ</h3>
-            <p>Kết nối với hàng ngàn người chơi khác và cùng nhau trải nghiệm.</p>
-        </div>
-    </div>
-</div>
+    <footer>
+        <p>&copy; 2024 Giải Trí Online - All Rights Reserved.</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2024 Thế Giới Trò Chơi Giải Trí. All rights reserved.</p>
-</footer>
-
+    <script>
+        function redirectToLoading() {
+            window.location.href = "loading.html";
+        }
+    </script>
 </body>
 </html>
